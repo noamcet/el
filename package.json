@@ -1,6 +1,6 @@
 {
   "name": "itestel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "iTest Electron POC application",
   "main": "main.js",
   "author": "CET Independent Products Team",
@@ -8,12 +8,13 @@
   "scripts": {
     "test": "test",
     "start": "electron .",
+    "start1": "gulp start",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "ship": "electron-builder build --win --x64",
     "shipMac": "electron-builder build --mac",
     "build": "electron-builder build --mac --win --publish never",
-    "deploy": "electron-builder build --mac --win --publish always",
+    "deploy": "electron-builder build --mac --publish always",
     "postinstall": "electron-builder install-app-deps"
   },
   "build": {
@@ -22,7 +23,6 @@
       "category": "public.app-category.utilities",
       "identity": "Center for Educational Technology",
       "icon": "TestLogo_New512.png",
-
       "target": [
         "zip",
         "dmg"
@@ -31,15 +31,13 @@
     "win": {
       "icon": "TestLogo_New.png",
       "certificateSha1": "B61E601F0CA31C9C57B319E2DC10DD3BFEEE74D9"
-     
     }
-    
-  
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/noamcet/electron-auto-update-example.git"
-  },  "devDependencies": {
+    "type": "git",
+    "url": "https://github.com/noamcet/el.git"
+  },
+  "devDependencies": {
     "electron": "^7.1.1",
     "electron-builder": "^21.2.0",
     "electron-prebuilt": "^1.4.13",
@@ -71,6 +69,7 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "electron-connect": "^0.6.3"
+    "electron-connect": "^0.6.3",
+    "electron-updater": "^4.2.0"
   }
 }

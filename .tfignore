@@ -1,0 +1,14 @@
+# dependencies
+\node_modules
+\.pnp
+\.pnp.js
+\package-lock.json
+\yarn.lock
+\Thumbs.db
+\out
+
+# testing
+\coverage
+
+# production
+\build

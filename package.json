@@ -1,0 +1,76 @@
+{
+  "name": "itestel",
+  "version": "1.0.0",
+  "description": "iTest Electron POC application",
+  "main": "main.js",
+  "author": "CET Independent Products Team",
+  "license": "ISC",
+  "scripts": {
+    "test": "test",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "ship": "electron-builder build --win --x64",
+    "shipMac": "electron-builder build --mac",
+    "build": "electron-builder build --mac --win --publish never",
+    "deploy": "electron-builder build --mac --win --publish always",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "com.electron.itestel",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "identity": "Center for Educational Technology",
+      "icon": "TestLogo_New512.png",
+
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    },
+    "win": {
+      "icon": "TestLogo_New.png",
+      "certificateSha1": "B61E601F0CA31C9C57B319E2DC10DD3BFEEE74D9"
+     
+    }
+    
+  
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/noamcet/electron-auto-update-example.git"
+  },  "devDependencies": {
+    "electron": "^7.1.1",
+    "electron-builder": "^21.2.0",
+    "electron-prebuilt": "^1.4.13",
+    "gulp": "^4.0.0",
+    "gulp-atom-electron": "^1.22.0",
+    "gulp-azure-storage": "^0.10.0",
+    "gulp-buffer": "0.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-eslint": "^5.0.0",
+    "gulp-filter": "^5.1.0",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-gunzip": "^1.0.0",
+    "gulp-json-editor": "^2.5.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-remote-retry-src": "^0.6.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-shell": "^0.6.5",
+    "gulp-tsb": "4.0.5",
+    "gulp-tslint": "^8.1.3",
+    "gulp-untar": "^0.0.7",
+    "gulp-vinyl-zip": "^2.1.2",
+    "ts-loader": "^6.2.1",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.2",
+    "typescript-formatter": "7.1.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "electron-connect": "^0.6.3"
+  }
+}

@@ -38,7 +38,7 @@
     "url": "https://github.com/noamcet/el.git"
   },
   "devDependencies": {
-    "electron": "^7.1.1",
+    "electron": "^9.4.0",
     "electron-builder": "^21.2.0",
     "electron-prebuilt": "^1.4.13",
     "gulp": "^4.0.0",
